@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Elite Furniture Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reports.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Elite Furniture</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="reports.html" class="active">Reports</a></li>
+            </ul>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="reports-container">
+        <h1>Reports Dashboard</h1>
+        
+        <div class="reports-grid">
+            <div class="report-card">
+                <h2>Sales Reports</h2>
+                <form id="sales-report-form">
+                    <div class="form-group">
+                        <label for="sales-date-from">From Date:</label>
+                        <input type="date" id="sales-date-from" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sales-date-to">To Date:</label>
+                        <input type="date" id="sales-date-to" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sales-category">Product Category:</label>
+                        <select id="sales-category">
+                            <option value="all">All Categories</option>
+                            <option value="tables">Tables</option>
+                            <option value="chairs">Chairs</option>
+                            <option value="beds">Beds</option>
+                            <option value="boards">Boards</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="report-btn">Generate Sales Report</button>
+                </form>
+            </div>
+
+            <div class="report-card">
+                <h2>Inventory Reports</h2>
+                <form id="inventory-report-form">
+                    <div class="form-group">
+                        <label for="inventory-status">Status:</label>
+                        <select id="inventory-status">
+                            <option value="all">All Items</option>
+                            <option value="in-stock">In Stock</option>
+                            <option value="low-stock">Low Stock</option>
+                            <option value="out-of-stock">Out of Stock</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inventory-category">Product Category:</label>
+                        <select id="inventory-category">
+                            <option value="all">All Categories</option>
+                            <option value="tables">Tables</option>
+                            <option value="chairs">Chairs</option>
+                            <option value="beds">Beds</option>
+                            <option value="boards">Boards</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="report-btn">Generate Inventory Report</button>
+                </form>
+            </div>
+
+            <div class="report-card">
+                <h2>Customer Reports</h2>
+                <form id="customer-report-form">
+                    <div class="form-group">
+                        <label for="customer-type">Customer Type:</label>
+                        <select id="customer-type">
+                            <option value="all">All Customers</option>
+                            <option value="new">New Customers</option>
+                            <option value="returning">Returning Customers</option>
+                            <option value="vip">VIP Customers</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-date-from">From Date:</label>
+                        <input type="date" id="customer-date-from">
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-date-to">To Date:</label>
+                        <input type="date" id="customer-date-to">
+                    </div>
+                    <button type="submit" class="report-btn">Generate Customer Report</button>
+                </form>
+            </div>
+
+            <div class="report-card">
+                <h2>Financial Summary</h2>
+                <form id="financial-report-form">
+                    <div class="form-group">
+                        <label for="financial-period">Period:</label>
+                        <select id="financial-period">
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="quarterly">Quarterly</option>
+                            <option value="yearly">Yearly</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="financial-date-from">From Date:</label>
+                        <input type="date" id="financial-date-from" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="financial-date-to">To Date:</label>
+                        <input type="date" id="financial-date-to" required>
+                    </div>
+                    <button type="submit" class="report-btn">Generate Financial Report</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="report-preview">
+            <h2>Report Preview</h2>
+            <div id="report-results">
+                <p class="no-report">No report generated yet. Please select a report type and parameters above.</p>
+            </div>
+            <div class="report-actions">
+                <button id="print-report" class="action-btn" disabled><i class="fas fa-print"></i> Print</button>
+                <button id="download-report" class="action-btn" disabled><i class="fas fa-download"></i> Download</button>
+                <button id="email-report" class="action-btn" disabled><i class="fas fa-envelope"></i> Email</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Elite Furniture</h3>
+                <p>Your destination for premium furniture in Kenya</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <p class="mt-2">We deliver across Kenya</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Elite Furniture Kenya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="reports.js"></script>
+</body>
+</html> 
