@@ -182,3 +182,31 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Customer</title>
+</head>
+<body>
+    <h2>Update Customer Details</h2>
+    <form action="update_customer.php" method="post">
+        <label for="customer_id">Customer ID:</label>
+        <input type="number" name="customer_id" required><br>
+        
+        <label for="customer_name">Customer Name:</label>
+        <input type="text" name="customer_name"><br>
+        
+        <label for="location">Location:</label>
+        <input type="text" name="location"><br>
+        
+        <label for="distance">Distance:</label>
+        <input type="number" name="distance"><br>
+        
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" name="phone_number"><br>
+        
+        <input type="submit" value="Update Customer">
+    </form>
+</body>
+</html>
